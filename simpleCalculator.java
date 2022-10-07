@@ -118,11 +118,11 @@ public class simpleCalculator {
 				case 5:
 					System.out.println("============================================");
 					// Initialize a double that can store the sum of user inputted variables
-					double totalNums = 0;
+					double totalAmount = 0;
 
 					System.out.println("How many integers do you want to find the average of? ");
 					int numOfInts = input.nextInt();
-					// Ask the user for how many integers they want to find the average of. z
+					// Ask the user for how many integers they want to find the average of and loops that many times.
 					for (int h = 0; h < numOfInts; h++) {
 						if (h == 0 || h == 20) {
 							String suffix = "st";
@@ -140,9 +140,11 @@ public class simpleCalculator {
 							String suffix = "th";
 							System.out.println("Enter the " + (h + 1) + suffix + " number: ");
 						}						double num = input.nextDouble();
-						totalNums += num;
+						//Adds the number the user inputted to totalAmount 
+						totalAmount += num;
 					}
-					double average = totalNums / numOfInts;
+					//Divides the total amount by the number of integers there are and gets the average.
+					double average = totalAmount / numOfInts;
 					System.out.println("The average of these numbers is " + average);
 					break;
 				case 6:
@@ -170,7 +172,7 @@ public class simpleCalculator {
 					double remainder = (firstModNum % secondModNum);
 					if (remainder != 0) {
 						System.out.println(firstModNum + " isn't divisible by " + secondModNum
-								+ " since the remainder of these two numbers are " + remainder);
+								+ " since the remainder of these two numbers are " + remainder + " and not 0.");
 					} else {
 						System.out.println("These two numbers are divisible!");
 					}
@@ -182,7 +184,7 @@ public class simpleCalculator {
 				case 9:
 					condition = !condition;
 					System.out.println("============================================");
-					System.out.println("Thank you for using this application! See you next time.");
+					System.out.println("Thank you for usin	g this application! See you next time.");
 					break;
 			}
 
