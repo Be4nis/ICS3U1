@@ -147,6 +147,7 @@ public class simpleCalculator {
 					double average = totalAmount / numOfInts;
 					System.out.println("The average of these numbers is " + average);
 					break;
+				//Case number 6 is used to find the Sine.
 				case 6:
 					System.out.println("============================================");
 					System.out.println("Enter your number: ");
@@ -165,10 +166,14 @@ public class simpleCalculator {
 				// Case 8 is used to find the DIVISIBILITY of an equation
 				case 8:
 					System.out.println("============================================");
+
+					//Get the user input for the first two numbers
 					System.out.println("Enter your first number: ");
 					double firstModNum = input.nextDouble();
 					System.out.println("Enter your second number: ");
 					double secondModNum = input.nextDouble();
+
+					//See if the remainder of the two numbers is 0 using an if statement. If it is divisible tell the user, if not tell the user what the remainder is.
 					double remainder = (firstModNum % secondModNum);
 					if (remainder != 0) {
 						System.out.println(firstModNum + " isn't divisible by " + secondModNum
@@ -177,18 +182,21 @@ public class simpleCalculator {
 						System.out.println("These two numbers are divisible!");
 					}
 					break;
-				default:
-					System.out.println("============================================");
-					System.out.println("============================================");
-					System.out.println("This is an invalid operation!");
+					//Case 9 is used to break out of the while loop by setting the condition to false.
 				case 9:
 					condition = !condition;
 					System.out.println("============================================");
 					System.out.println("Thank you for usin	g this application! See you next time.");
 					break;
+					//Used to tell the user if they made an error, will not break the while loop/stop the program
+				default:
+					System.out.println("============================================");
+					System.out.println("============================================");
+					System.out.println("This is an invalid operation!");
 			}
 
 		}
+		//Close the scanner
 		input.close();
 	}
 }
